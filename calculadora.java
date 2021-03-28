@@ -14,6 +14,7 @@ public class calculadora {
 	 * @param resta Devuelve el valor de la resta
 	 * @param multiplicacion Devuelve el valor de la multiplicación
 	 * @param division Devuelve el valor de la división
+	 * @param raiz Devuelve el valor de la Raiz Cuadrada
 	 */
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
@@ -26,7 +27,8 @@ public class calculadora {
 		System.out.println( "2. Resta" );
 		System.out.println( "3. Multiplicación" );
 		System.out.println( "4. División" );
-		System.out.println( "5. Salir" );
+		System.out.println( "5. Raiz cuadrada" );
+		System.out.println( "6. Salir" );
 		operacion = teclado.nextInt();
 		
 			switch (operacion) {
@@ -63,9 +65,15 @@ public class calculadora {
 				double division=primeroperando/segundooperando;
 				System.out.println("El resultado de la división es: " + division);
 				break;
+			case 5: //RAIZ CUADRADA
+				System.out.println( "Introduzca el operando de la raiz cuadrada" );
+				primeroperando = teclado.nextDouble();
+				double raiz=primeroperando*primeroperando;
+				System.out.println("El resultado de la raiz cuadrada es: " + raiz);
+				break;
 			default: System.out.println("Saludos hasta la proxima") ;
 				break;
 			}
-		}while (operacion!=5);
+		}while (operacion!=6);
  	}
  }
