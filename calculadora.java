@@ -1,12 +1,26 @@
 import java.util.Scanner;
-
-import javax.swing.JOptionPane;
+/**
+ * 
+ * @author Luis
+ * @version 3.0
+ */
 public class calculadora {
-
+	/**
+	 * 
+	 * @param operacion Valor que se usa para escoger la operacion a realizar
+	 * @param primeroperando Valor para asignar el valor del primer operando de la operación
+	 * @param segundooperando Valor para asignar el valor del segundo operando de la operación
+	 * @param suma Devuelve el valor de la suma
+	 * @param resta Devuelve el valor de la resta
+	 * @param multiplicacion Devuelve el valor de la multiplicación
+	 * @param division Devuelve el valor de la división
+	 */
 	public static void main(String[] args) {
 		Scanner teclado = new Scanner(System.in);
 		int operacion;
-		
+		double primeroperando;
+		double segundooperando;
+		do {
 		System.out.println( "-->Menú calculadora<--" );
 		System.out.println( "1. Suma" );
 		System.out.println( "2. Resta" );
@@ -18,39 +32,40 @@ public class calculadora {
 			switch (operacion) {
 			case 1: //SUMA
 				System.out.println( "Introduzca el primer operador de la suma" );
-				double suma1 = teclado.nextDouble();
+				primeroperando = teclado.nextDouble();
 				System.out.println( "Introduzca el segundo operador de la suma" );
-				double suma2 = teclado.nextDouble();
-				double suma=suma1+suma2;
+				segundooperando = teclado.nextDouble();
+				double suma=primeroperando+segundooperando;
 				System.out.println("El resultado de la suma es: " + suma);
 				break;
 			
 			case 2: //RESTA
 				System.out.println( "Introduzca el primer operador de la resta" );
-				double resta1 = teclado.nextDouble();
+				primeroperando = teclado.nextDouble();
 				System.out.println( "Introduzca el segundo operador de la resta" );
-				double resta2 = teclado.nextDouble();
-				double resta=resta1-resta2;
+				segundooperando = teclado.nextDouble();
+				double resta=primeroperando-segundooperando;
 				System.out.println("El resultado de la resta es: " + resta);
 				break;
 			case 3: //MULTIPLICACION
 				System.out.println( "Introduzca el primer operador de la multiplicacion" );
-				double multiplicacion1 = teclado.nextDouble();
+				primeroperando = teclado.nextDouble();
 				System.out.println( "Introduzca el segundo operador de la multiplicacion" );
-				double multiplicacion2 = teclado.nextDouble();
-				double multiplicacion=multiplicacion1*multiplicacion2;
+				segundooperando = teclado.nextDouble();
+				double multiplicacion=primeroperando*segundooperando;
 				System.out.println("El resultado de la multiplicación es: " + multiplicacion);
 				break;
 			case 4: //DIVISION
 				System.out.println( "Introduzca el primer operador de la division" );
-				double division1 = teclado.nextDouble();
+				primeroperando = teclado.nextDouble();
 				System.out.println( "Introduzca el segundo operador de la division" );
-				double division2 = teclado.nextDouble();
-				double division=division1/division2;
+				segundooperando = teclado.nextDouble();
+				double division=primeroperando/segundooperando;
 				System.out.println("El resultado de la división es: " + division);
 				break;
 			default: System.out.println("Saludos hasta la proxima") ;
 				break;
 			}
+		}while (operacion!=5);
  	}
  }
