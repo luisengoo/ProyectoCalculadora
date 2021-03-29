@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * 
  * @author Luis
- * @version 3.0
+ * @version 3.1
  */
 public class calculadora {
 	/**
